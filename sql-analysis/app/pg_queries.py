@@ -38,6 +38,7 @@ print("RESULT:", len(result))
 #    ('A row name', null),
 #    ('Another row, with JSON', '{ "a": 1, "b": ["dog", "cat", 42], "c": true }'::JSONB)
 #"""
+#cursor.execute(insertion_query) 
 #
 # APPROACH 2 (needs updating / wasn't working sorry!)
 #
@@ -51,7 +52,9 @@ print("RESULT:", len(result))
 #)
 #cursor.execute(insertion_query)
 #
-# APPROACH 3 (multi-row insert!)
+
+
+# APPROACH 3 (multi-row insert!) List of tuples? in execute_values
 #
 my_dict = { "a": 1, "b": ["dog", "cat", 42], "c": 'true' }
 # h/t: https://stackoverflow.com/questions/8134602/psycopg2-insert-multiple-rows-with-one-query
