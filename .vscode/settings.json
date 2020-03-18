@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "C:\\Users\\jonma\\.virtualenvs\\sql-practice-wHUPcU9T\\Scripts\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true
+}

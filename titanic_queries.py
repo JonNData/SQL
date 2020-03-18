@@ -32,11 +32,11 @@ query = """
 CREATE TABLE IF NOT EXISTS titanic_table (
   Survived int,
   Pclass int,
-  Name varchar(40),
-  Sex varchar(40),
+  Name varchar(255),
+  Sex varchar(255),
   Age int,
-  Siblings_or_Spouses varchar(40),
-  Parents_Children varchar(40),
+  Siblings_or_Spouses varchar(255),
+  Parents_Children varchar(255),
   Fare float)
 """
 cursor.execute(query)
