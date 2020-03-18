@@ -67,13 +67,13 @@ print(db.list_collection_names())
 # for pika in pikas_cursor:
 #     print(pika)
 
-# new_objects = [
-#     {"name": "Bulbasaur", "attack": 70},
-#     {"name": "Charmander", "attack": 100},
-#     {"name": "Jigglypuff", "attack": 50},
-# ]
-# collection.insert_many(new_objects)
-# print("DOCS:", collection.count_documents({}))
+new_objects = [
+    {"name": "Articuno", "attack": 110},
+    {"name": "Zapdos", "attack": 140},
+    {"name": "Moltres", "attack": 130},
+]
+collection.insert_many(new_objects)
+print("DOCS:", collection.count_documents({}))
 
 # # which pokemon have an attack greater than 60?
 # attackers = collection.find({"attack": {"$gt": 60}})
