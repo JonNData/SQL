@@ -25,15 +25,21 @@ connection = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASSWORD
 print("CONNECTION:", connection)
 cursor = connection.cursor()
 print("CURSOR:", cursor)
-
-for i in range(0,len(df)):
-    values = list(df.itertuples(index=False, name=None))[i]
-
-    insertion_query = f'''
-    INSERT INTO titanic_table (Survived, Pclass, Name, Sex, Age, Siblings_or_Spouses, Parents_Children, Fare)
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)'''
-
-    cursor.execute(insertion_query, values)
+#
+# TABLE CREATION
+#
+query = """
+CREATE TABLE IF NOT EXISTS titanic_table (
+  Survived int,
+  Pclass int,
+  Name varchar(255),
+  Sex varchar(255),
+  Age int,
+  Siblings_or_Spouses varchar(255),
+  Parents_Children varchar(255),
+  Fare float)
+"""
+cursor.execute(query)
 cursor.execute("SELECT * from titanic_table")
 result = cursor.fetchall()
 print("RESULT:", result)
