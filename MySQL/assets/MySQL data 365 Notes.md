@@ -1,14 +1,16 @@
 https://drive.google.com/open?id=1wILPEoAx4o_JwfcjrePSkgNK-tLKL-D7kLXjyeeU2mU
+
 MySQL 
-Reliable
-Mature
-Used by FB, youtube, booking, linkedin, dropbox, twitter, pinterest
+* Reliable
+* Mature
+*Used by FB, youtube, booking, linkedin, dropbox, twitter, pinterest
 Highest ranked on db-engines ranking (free. Oracle is 1st)
 Types of programming:
-Procedural (imperative)
-OOP
-Declarative This is SQL
-functional
+* Procedural (imperative)
+* OOP
+* Declarative This is SQL
+* functional
+
 SQL declarative,dgaf how done, only results. Algorithms are built in and there’s optimizer that separates tasks into smaller steps to get it done.
 
 SQL Syntax
