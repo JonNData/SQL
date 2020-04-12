@@ -63,10 +63,10 @@ One entity from X can be associated with more than one entity from Y and vice ve
 For example, Students as a group are associated with multiple faculty members, and faculty members can be associated with multiple students.
 
 
-
+To run MySQL database, if it’s not running yet, Services app (search bar) and run MySQL
 MySQL Workbench
 Client server model: the workbench takes written code, submits the query to the MySQL server that we just installed and then the results are displayed back in the workbench
-To start the SQL server, run services on windows and choose mysql server
+To start the SQL server, run services on windows and choose mysql server. Usual pass
 
 CREATE DATABASE and CREATE SCHEMA are the same. Need to refresh schema to see
 USE Sales; select USE database to perform operations on that one
@@ -123,4 +123,53 @@ WILDCARD Characters: % one or more   	_ single character  	* all
 WHERE salary BETWEEN ‘66000’ AND ‘70000’;  Between...and is INCLUSIVE
 
 Best use strings in searching values even for numbers
+SELECT COUNT(*) FROM EMPLOYEES to get the number of rows… even though it will tell you
 
+GROUP BY will do the same as select distinct in that multiples will be condensed to one row
+You should always include the group by parameter in the SELECT statement (to see what the group is in the results)
+
+HAVING is like WHERE but used with GROUP BY (before order by).  Allows use of aggregate functions (where would fail is used group by). HAVING can not have two non-aggregate functions in the same clause
+
+INSERT INTO table (cols….) VALUE ( values for each col)
+
+INSERT data INTO a diff table.
+
+INSERT INTO table_2 (cols…)
+SELECT col1,col2,...
+FROM table_1
+WHERE conditions you want to put into the new table;
+
+TRANSACTION CONTROL LANGUAGE
+COMMIT statement
+	Saves transaction in database, cannot undo changes
+ROLLBACK 
+	Allows you to step back and disregard last changes. Last non committed state
+
+UPDATE table_name
+SET col1 =val1
+WHERE conditions;  you NEED the where clause or else it will update all rows in the table
+
+DELETE FROM table_name
+WHERE conditions
+The foreign key constraint  will delete in multiple connected tables
+
+DELETE vs DROP vs TRUNCATE
+Drop table will get rid of entire table
+Truncate will reset index and remove contents, but table struct will be intact
+DELETE can use WHERE and removes row by row, does not reset index
+
+
+AGGREGATE FUNCTIONS
+Count, can use DISTINCT, * will use all rows nulls included. No whitespace
+SUM
+MIN
+MAX
+AVG
+Can apply ROUND around all these aggregate functions can use 
+ROUND(input, # of decimal places)
+
+
+IFNULL(expression 1, alternative value if null)
+	SELECT dept_no,  IFNULL(dept_name, ‘Department name not provided’) as dept_name
+
+COALESCE() is like IFNULL() but with multiple values, will check (exp1, expr2, expr3) in order if each are null then display the first non-Null
