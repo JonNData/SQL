@@ -56,8 +56,11 @@ WITH mau AS
   ```
 
 
-Q7) Which of the following statement will add a column ‘F_name’ to the STUDENT table?
-A. ALTER TABLE Student add column ( F_name varchar(20));
-B. ALTER TABLE Student add F_name varchar(20);
-C. ALTER TABLE Student add (F_name varchar(20));
-D. ALTER TABLE Student add column (F_name);
+Q7) Which of the following statement will add a column ‘F_name’ to the STUDENT table?  
+A. ALTER TABLE Student add column ( F_name varchar(20));  
+B. ALTER TABLE Student add F_name varchar(20);  
+C. ALTER TABLE Student add (F_name varchar(20));    
+D. ALTER TABLE Student add column (F_name);  
+
+Solution: B  
+ALTER TABLE command allows a user to add a new column to a table. Option B is correct syntax of ALTER to add a column in the table.
