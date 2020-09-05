@@ -63,4 +63,15 @@ C. ALTER TABLE Student add (F_name varchar(20));
 D. ALTER TABLE Student add column (F_name);  
 
 Solution: B  
-ALTER TABLE command allows a user to add a new column to a table. Option B is correct syntax of ALTER to add a column in the table.
+ALTER TABLE command allows a user to add a new column to a table. Option B is correct syntax of ALTER to add a column in the table.  
+
+Q9) ‘Sid’ in “ENROLLED” table is ‘Foreign Key’ referenced by ‘Sid’ in “STUDENT” table. Now you want to insert a record into the ENROLLED table.  
+Which of the following option(s) will insert a row in ENROLLED table successfully?  
+INSERT INTO ENROLLED values(53667, '15-420', 'C');  
+INSERT INTO ENROLLED values(53666, '15-421', 'C');  
+INSERT INTO ENROLLED values(53667, '15-415', 'C');  
+INSERT INTO ENROLLED values(53666, '15-415', 'C');   
+A. 1 and 3  
+B. Only 3  
+C. 2 and 4  
+D. Only 4  
