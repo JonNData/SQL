@@ -54,3 +54,10 @@ WITH mau AS
     */
     mau b ON a.month_timestamp = b.month_timestamp - interval '1 month' 
   ```
+
+
+Q7) Which of the following statement will add a column ‘F_name’ to the STUDENT table?
+A. ALTER TABLE Student add column ( F_name varchar(20));
+B. ALTER TABLE Student add F_name varchar(20);
+C. ALTER TABLE Student add (F_name varchar(20));
+D. ALTER TABLE Student add column (F_name);
